@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Mac OS files
+.DS_Store
+
+# PDF and data cache files
+*.faiss
+*.pkl
+uploaded.pdf
+testdoc.pdf
+
+# VSCode settings
+.vscode/
+
+# Environment variables and secrets
+.env
+
+# Ignore model cache (if any)
+.cache/
+
+# Ignore git directory (for safety, though git itself ignores it)
+.git/ 
