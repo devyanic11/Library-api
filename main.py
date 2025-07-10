@@ -62,6 +62,16 @@ async def ask_question(question: str = Form(...)):
         logger.error(f"[ASK] Error during answer generation: {e}")
         return JSONResponse(status_code=500, content={"error": str(e)})
 
+@app.post("/reset/")
+async def reset_pdf():
+    global chunks, metadata, index, processing, processing_error
+    chunks = None
+    metadata = None
+    index = None
+    processing = False
+    processing_error = None
+    return {"status": "reset"}
+
 @app.get("/")
 def root():
     return {"message": "📚 PDF Q&A API is running. Use /upload-pdf and /ask endpoints."}
